@@ -1,162 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trijit</title>
-<style>
-    :root {
-        --bg: #0b0f19;
-        --card: #121826;
-        --text: #e6e6e6;
-        --accent: #4b79ff;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trijit | Official Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
     }
 
     body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        overflow-x: hidden;
+      background: #0d0d0d;
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
     }
 
     header {
-        text-align: center;
-        padding: 80px 20px;
-        animation: fadeIn 1.5s ease;
+      padding: 60px 0;
+      animation: fadeIn 1.5s ease-in-out;
     }
 
     h1 {
-        font-size: 3.5rem;
-        margin: 0;
-        color: var(--accent);
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(45deg, #00d9ff, #0084ff, #b300ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     p {
-        font-size: 1.2rem;
-        opacity: 0.8;
+      font-size: 1.3rem;
+      margin-top: 10px;
+      color: #cfcfcf;
     }
 
-    nav {
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        padding: 15px;
-        background: #070b13;
-        position: sticky;
-        top: 0;
+    .btn {
+      margin-top: 25px;
+      padding: 12px 30px;
+      background: #0084ff;
+      border-radius: 30px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      display: inline-block;
+      transition: 0.3s;
     }
 
-    nav a {
-        color: var(--text);
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1rem;
-        transition: 0.3s;
+    .btn:hover {
+      transform: scale(1.1);
+      background: #00d9ff;
     }
 
-    nav a:hover {
-        color: var(--accent);
-        transform: scale(1.1);
-    }
-
-    section {
-        padding: 60px 20px;
-        text-align: center;
-        animation: fadeUp 1.2s ease;
+    .section {
+      margin-top: 80px;
+      padding: 30px;
     }
 
     .card {
-        background: var(--card);
-        max-width: 750px;
-        margin: auto;
-        padding: 25px;
-        border-radius: 18px;
-        box-shadow: 0 0 20px rgba(75,121,255,0.2);
-        transition: 0.4s;
+      width: 70%;
+      margin: auto;
+      background: #141414;
+      padding: 30px;
+      border-radius: 15px;
+      font-size: 1.2rem;
+      border: 1px solid #222;
+      box-shadow: 0 0 25px rgba(0, 170, 255, 0.2);
+      animation: slideUp 1.3s ease;
     }
 
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 25px rgba(75,121,255,0.45);
-    }
-
-    #toggleBtn {
-        background: var(--accent);
-        color: white;
-        padding: 10px 22px;
-        border: none;
-        border-radius: 40px;
-        cursor: pointer;
-        font-weight: bold;
-        margin-top: 30px;
-        transition: 0.3s;
-    }
-
-    #toggleBtn:hover {
-        transform: scale(1.1);
-    }
-
-    /* Animations */
     @keyframes fadeIn {
-        from {opacity: 0; transform: translateY(20px);}
-        to {opacity: 1; transform: translateY(0);}
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
-    @keyframes fadeUp {
-        from {opacity: 0; transform: translateY(30px);}
-        to {opacity: 1; transform: translateY(0);}
+
+    @keyframes slideUp {
+      from {transform: translateY(40px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
     }
-</style>
+
+    footer {
+      margin-top: 100px;
+      padding: 20px;
+      color: #444;
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
-
 <header>
-    <h1>Trijit ⚡</h1>
-    <p>11-year-old coder • Robotics lover • Web developer</p>
+  <h1>🚀 Hey! I'm Trijit</h1>
+  <p>11-year-old developer, gamer, and future billionaire 😎</p>
+  <a class="btn" href="#about">Know More</a>
 </header>
 
-<section id="about">
-    <div class="card">
-        <h2>About Me</h2>
-        <p>I'm a student who loves coding, science, and technology. I build robots, websites, and cool projects 🚀</p>
-    </div>
+<section id="about" class="section">
+  <div class="card">
+    <h2>About Me</h2><br>
+    <p>
+      I love coding, robots, AI, gaming, and creating awesome projects.
+      My dream is to build futuristic tech and change the world! 💡
+    </p>
+  </div>
 </section>
 
-<section id="projects">
-    <div class="card">
-        <h2>Projects</h2>
-        <p>- Talking Robot<br>- ESP8266 Smart Car<br>- 3D Snake Game<br>- Websites & animations</p>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Coming soon: Instagram | GitHub | Email</p>
-    </div>
-</section>
-
-<center>
-    <button id="toggleBtn">Toggle Dark / Light Mode</button>
-</center>
-
-<script>
-    const btn = document.getElementById("toggleBtn");
-    let dark = true;
-
-    btn.onclick = () => {
-        dark = !dark;
-        document.body.style.background = dark ? "#0b0f19" : "#ffffff";
-        document.body.style.color = dark ? "#e6e6e6" : "#000000";
-        btn.style.background = dark ? "#4b79ff" : "#000000";
-    };
-</script>
+<footer>
+  Made with ❤️ by Trijit
+</footer>
 
 </body>
 </html>
+
